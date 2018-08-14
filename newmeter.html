@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>New Meter</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/newmeter.css" />
+</head>
+<body>
+    <a class="active" href="meters.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <div>
+        <form class="panel">
+            <h1>New Meter</h1>
+            <select name="type">
+                <option value="Electric">Electric</option>
+                <option value="Gas">Gas</option>
+                <option value="Water">Water</option>
+            </select>
+            <input type="text" name="metername" placeholder="Meter Name">
+            <input type="text" name="description" placeholder="Description">
+            <input type="text" name="readfrequency" placeholder="Read Frequency">
+            <input type="text" name="placement" placeholder="Placement">
+            <input type="date" name="initialdate" placeholder="">
+            <input type="text" name="initialvalue" placeholder="Initial Value">
+            <input type="text" name="sortindex" placeholder="Sort Index">
+            <input type="submit" class="submit" name="submit" value="submit">
+        </form>
+
+    </div>
+</body>
+</html>

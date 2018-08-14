@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/dailytasks.css" />
+    <script src="scripts/global.js"></script>
+    <script src='fullcalendar/lib/jquery.min.js'></script>
+    <script src='fullcalendar/lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script>
+        $(function () {
+            $('#calendar').fullCalendar({
+                defaultView: 'listDay',
+                aspectRatio: 1,
+                header: {
+                    left: 'title',
+                    center: '',
+                    right: 'prev,next'
+                },
+                events: [
+                    {
+                        title: 'event1',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+                    {
+                        title: 'event2',
+                        start: '2018-07-28'
+                    },
+
+                    {
+                        title: 'event3',
+                        start: '2018-07-28T14:30:00',
+                        allDay: false // will make the time show
+                    },
+                    {
+                        title: 'event3',
+                        start: '2018-07-28T12:30:00',
+                        allDay: false // will make the time show
+                    }
+                ],
+                  eventClick: function () {
+
+                    // change the border color just for fun
+                      $("tr").css('color', 'white');
+                      $(this).css('color', 'black');
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="topnavigation">
+            <img id="navlogo" src="images/passms.png" />
+            <span id="close" class="glyphicon glyphicon-remove" onclick="closeNav()"></span>
+        </div>
+        <div class="navigation">
+            <a class="links" href="dailytasks.html">Today's Agenda</a>
+            <a class="links" href="reports.html">Report A Problem</a>
+            <a class="links" href="meters.html">Meters</a>
+        </div>
+        <div class="botnavigation">
+            <a id="logout" href="index.html"><span id="userpic" class="glyphicon glyphicon-user"></span><span id="logouttext">Logout</span></a>
+        </div>
+    </div>
+    <div id="main">
+        <span id="nav-gliph" onclick="openNav()" class="glyphicon glyphicon-th-list"></span>
+        <a id="add-gliph" href="newmeter.html"><span class="glyphicon glyphicon-plus"></span></a>
+        <div class="panel">
+
+            <h1>Daily Tasks and Repairs</h1>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

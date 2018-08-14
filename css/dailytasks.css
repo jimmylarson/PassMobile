@@ -1,0 +1,47 @@
+﻿#add-gliph {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+span {
+    font-size: 100%;
+    color: black;
+}
+
+.buttonsorts {
+    width: 100%;
+    text-align: center;
+}
+
+.sort {
+    width: 25%;
+    float: left;
+    color: black;
+    font-size: 10px;
+}
+
+.panel {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    background: #2b2b2b;
+    margin: 15% auto;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+
+h1 {
+    font-size: 20px;
+    margin: 0px !important;
+    padding-bottom: 10px;
+}
+
+h2{
+    font-size: 15px;
+    padding-top: 7px;
+}
+
+
