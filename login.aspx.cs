@@ -19,6 +19,11 @@ namespace PassMobile
             var password = TextPassword.Text;
             contLogin = new LoginController();
             mobileSession = contLogin.Login(username, password);
+
+            if (mobileSession.authenticated == "true")
+            {
+                Response.Redirect("dailytasks.html");
+            }
         }
     }
 }
