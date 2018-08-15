@@ -59,9 +59,7 @@
 
                     <asp:Button ID="ModalEventDetailsComplete"
                         runat="server" ClientIDMode="Static"
-                        Text="Complete" OnClick="ModalEventDetailsComplete_Click"
-                        OnClientClick="if (!Page_ClientValidate()){ return false; } this.disabled=true; this.value='working...';"
-                        UseSubmitBehavior="false" CssClass="data-buttons" />
+                        Text="Complete" OnClick="ModalEventDetailsComplete_Click" CssClass="data-buttons" />
 
                     <asp:Button ID="ModalEventDetailsDelete" runat="server" Text="Delete" OnClick="ModalEventDetailsDelete_Click" CssClass="data-buttons" />
 
