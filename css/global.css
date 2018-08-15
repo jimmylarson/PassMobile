@@ -10,7 +10,7 @@ body {
     overflow: auto;
 }
 
-.sidenav {
+#sidenav {
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -22,12 +22,12 @@ body {
     width:0;
 }
 
-    .sidenav a {
+    #sidenav a {
         display: block;
         transition: 0.2s;
     }
 
-        .sidenav a:hover {
+        #sidenav a:hover {
             color: #f1f1f1;
         }
 
@@ -48,44 +48,13 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {
+    #sidenav {
         padding-top: 15px;
     }
 
-        .sidenav a {
+        #sidenav a {
             font-size: 18px;
         }
-}
-
-.topnavigation {
-    height: 10%;
-    width: 100%;
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.navigation{
-    height:20%;
-    width:100%;
-    display:block;
-    text-align: center;
-}
-
-.botnavigation {
-    height: 10%;
-    width: 100%;
-    display: block;
-    bottom: 10px;
-    padding-right: 15px;
-}
-
-#navlogo {
-    float:left;
-    max-width: 200px;
-    height: 50%;
-    max-height: 200px;
-    top: 20%;
 }
 
 #nav-gliph {
@@ -110,3 +79,71 @@ body {
     color: white;
     padding-left: 2px;
 }
+
+.glyphicon {
+    font-size: 2em;
+}
+
+.panel {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px black;
+    background: #141519;
+    margin: 15% auto;
+    text-align: center;
+}
+
+    .panel select {
+        padding: 10px;
+        background-color: #22232a;
+        border-radius: 45px;
+        font-size: 15px;
+        border: none;
+        width: 95%;
+        text-align: left;
+        margin: 0px auto;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .panel h1 {
+        margin: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .panel input {
+        padding: 10px;
+        background-color: #22232a;
+        border-radius: 45px;
+        font-size: 15px;
+        border: none;
+        width: 95%;
+        text-align: left;
+        margin: 0px auto;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .panel .submit {
+        width: 95%;
+        background-color: #8bc34a;
+        border-radius: 45px;
+        position: relative;
+        line-height: 25px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        margin: 0px auto;
+        cursor: pointer;
+        border: 0px;
+        margin-bottom: 5px;
+    }
+
+        .panel .submit:active {
+            transform: translateY(2px);
+        }
+
+        .panel .submit:hover {
+            background-color: #599b2d;
+        }

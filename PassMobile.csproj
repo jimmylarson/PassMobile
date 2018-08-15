@@ -81,6 +81,7 @@
     <Content Include="css\meters.css" />
     <Content Include="css\newmeter.css" />
     <Content Include="css\reports.css" />
+    <Content Include="css\sidenav.css" />
     <Content Include="css\tasks.css" />
     <Content Include="dailytasks.html" />
     <Content Include="fullcalendar\CHANGELOG.txt" />
@@ -218,6 +219,7 @@
     <Content Include="scripts\index.js" />
     <Content Include="scripts\meters.js" />
     <Content Include="scripts\platformOverrides.js" />
+    <Content Include="sidenav.html" />
     <Content Include="tasks.html" />
     <Content Include="Web.config" />
   </ItemGroup>
