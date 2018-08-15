@@ -9,16 +9,8 @@ span {
     color: black;
 }
 
-.buttonsorts {
-    width: 100%;
-    text-align: center;
-}
-
-.sort {
-    width: 25%;
-    float: left;
-    color: black;
-    font-size: 10px;
+.panel {
+    height: 100%;
 }
 
 h1 {
@@ -34,5 +26,27 @@ h2{
 
 button {
     background-image: none !important;
+}
+
+.fc-list-view {
+    border: none !important;
+    padding: 0 !important;
+}
+
+td {
+    border: none !important;
+}
+
+tr:first-child td {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.calendar-container {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.fc-scroller {
+    height: 100% !important;
 }
 

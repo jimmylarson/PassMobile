@@ -38,50 +38,10 @@ span {
         background-color: #8bc34a;
     }
 
-
-table{
-    margin: 10px auto;
-    width:100%;
-}
-
-tr{
-    width:100%;
-    text-align: center;
-}
-
 td, th {
     width: 30%;
     text-align: center !important;
     height: 15px;
     font-size: 15px;
     padding: 10px !important;
-}
-
-th {
-    background-color: white;
-    color: black;
-}
-
-th:first-child {
-    border-radius: 5px 0px 0px 0px;
-}
-
-th:last-child {
-    border-radius: 0px 5px 0px 0px;
-}
-
-tr:last-child td:first-child {
-    border-radius: 0px 0px 0px 5px;
-}
-
-tr:last-child td:last-child {
-    border-radius: 0px 0px 5px 0px;
-}
-
-table tr:nth-child(even) {
-    background-color: #424242;
-}
-
-table tr:nth-child(odd) {
-    background-color: #333;
 }

@@ -87,11 +87,12 @@ body {
 .panel {
     width: 90%;
     border-radius: 10px;
-    box-shadow: 0 10px 10px black;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.7);
     background: #141519;
     margin: 15% auto;
     text-align: center;
     color: white;
+    height: 85%;
 }
 
     .panel select {
@@ -149,3 +150,42 @@ body {
         .panel .submit:hover {
             background-color: #599b2d;
         }
+
+table {
+    margin: 10px auto;
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    background-color: white;
+    color: black;
+}
+
+th:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+th:last-child {
+    border-radius: 0px 5px 0px 0px;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0px 0px 0px 5px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0px 0px 5px 0px;
+}
+
+tr:nth-child(even) {
+    background-color: #424242;
+}
+
+tr:nth-child(odd) {
+    background-color: #333;
+}
