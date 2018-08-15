@@ -41,12 +41,21 @@ tr:first-child td {
     border-radius: 5px 5px 0px 0px;
 }
 
-.calendar-container {
+#calendar {
     width: 90% !important;
     margin: 0 auto !important;
+    padding-bottom: 8px;
 }
 
 .fc-scroller {
     height: 100% !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: black !important;
 }
 
