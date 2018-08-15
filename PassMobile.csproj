@@ -203,6 +203,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="webapi\events.aspx" />
     <Content Include="webapi\mobile_login.aspx" />
     <None Include="Properties\PublishProfiles\PassMSMobileClient.pubxml" />
     <None Include="Web.Debug.config">
@@ -225,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,8 +234,17 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\MobileSessionModel.cs" />
+    <Compile Include="Models\ScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="webapi\events.aspx.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webapi\events.aspx.designer.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
     <Compile Include="webapi\mobile_login.aspx.cs">
       <DependentUpon>mobile_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
