@@ -11,6 +11,10 @@ namespace PassMobile
         private MobileSessionModel mobileSession { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Remove("mas");
+            Session.Remove("comp");
+            Session.Remove("role");
+            Session.Remove("group");
         }
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
