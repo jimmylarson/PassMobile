@@ -26,11 +26,9 @@
             <div class="form">
             <form id="form1" runat="server" onsubmit="">
             <div>
-                <asp:Label runat="server">Username:</asp:Label>
-                <asp:TextBox id="TextUsername" runat="server" />
-                <asp:Label runat="server">Password:</asp:Label>
-                <asp:TextBox id="TextPassword" runat="server" TextMode="Password" />
-                <asp:Button id="ButtonLogin" runat="server" OnClick="ButtonLogin_Click" Text="Login" />
+                <asp:TextBox id="TextUsername" runat="server" placeholder="Username"/>
+                <asp:TextBox id="TextPassword" runat="server" TextMode="Password" placeholder="Password"/>
+                <asp:Button id="ButtonLogin" class="login" runat="server" OnClick="ButtonLogin_Click" Text="Login" />
             </div>
             </form>
             </div>

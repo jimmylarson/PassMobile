@@ -24,54 +24,28 @@ input {
     }
 
     .panel .login {
-        width: 95%;
+        width: 80%;
         background-color: #8bc34a;
         border-radius: 45px;
-        position: relative;
-        line-height: 45px;
         text-align: center;
         font-weight: bold;
         color: white;
         margin: 0px auto;
         cursor: pointer;
-        border: 0px;
+        margin-bottom: 10px;
     }
 
-        .panel .login:active {
-            transform: translateY(2px);
-        }
-
-        .panel .login:hover {
-            background-color: #599b2d;
-        }
-
-    .panel input[type='text'] {
+    .panel input {
         background-color: #22232a;
         border-radius: 45px;
         font-size: 15px;
-        height: 45px;
         border: none;
-        width: 95%;
+        width: 80%;
         text-align: left;
         margin: 0px auto;
         margin-bottom: 10px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
-
-        .panel input[type='text'][placeholder] {
-            color: #656d79;
-        }
-    
-
-    .panel .link {
-        margin-top: 15px;
-        font-size: 14px;
-    }
-
-
-        .panel .link a:link {
-            color: #3366ff;
-        }
 
 #logo {
     max-width: 200px;
