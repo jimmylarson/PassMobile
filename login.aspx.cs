@@ -22,6 +22,10 @@ namespace PassMobile
 
             if (mobileSession.authenticated == "true")
             {
+                Session["mas"] = mobileSession.mas;
+                Session["comp"] = mobileSession.comp;
+                Session["role"] = mobileSession.role;
+                Session["group"] = mobileSession.group;
                 Response.Redirect("dailytasks.html");
             }
         }
