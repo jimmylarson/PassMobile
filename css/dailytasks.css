@@ -40,8 +40,11 @@ h1 {
 }
 
 h2{
-    font-size: 15px;
+    font-size: 15px !important;
     padding-top: 7px;
 }
 
+button {
+    background-image: none !important;
+}
 
