@@ -1,17 +1,25 @@
 ﻿using System;
+using PassMobile.Controllers;
+using PassMobile.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace PassMobile
 {
     public partial class dailytasks : System.Web.UI.Page
     {
+        protected ScheduleController contSchedule { get; set; }
+        protected PersonnelController contPersonnel { get; set; }
+        protected List<PersonnelSelectionsModel> modCompanyPersonnelSelections { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                contPersonnel = new PersonnelController();
+                modCompanyPersonnelSelections = contPersonnel.GetPersonnelSelectionsList(Session["mas"].ToString(), Session["comp"].ToString());
+                ModalEventDetailsCompletedBy.DataSource = modCompanyPersonnelSelections;
+                ModalEventDetailsCompletedBy.DataTextField = "NameFull";
+                ModalEventDetailsCompletedBy.DataValueField = "PersonnelId";
+                ModalEventDetailsCompletedBy.DataBind();
+            }
         }
 
         protected void ModalEventDetailsComplete_Click(object sender, EventArgs e)

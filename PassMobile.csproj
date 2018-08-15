@@ -189,8 +189,13 @@
     <Content Include="fullcalendar\locale\zh-cn.js" />
     <Content Include="fullcalendar\locale\zh-tw.js" />
     <Content Include="images\cordova.png" />
+    <Content Include="images\favico.png" />
     <Content Include="images\glyphicons-225-chevron-left.png" />
+    <Content Include="images\logo-lrg.png" />
     <Content Include="images\passms.png" />
+    <Content Include="images\passms_banner_fb.png" />
+    <Content Include="images\passms_banner_med.png" />
+    <Content Include="images\pass_logo.png" />
     <Content Include="login.aspx" />
     <Content Include="meters.html" />
     <Content Include="newmeter.html" />
@@ -227,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PersonnelController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="dailytasks.aspx.cs">
       <DependentUpon>dailytasks.aspx</DependentUpon>
@@ -244,6 +250,7 @@
     </Compile>
     <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\MobileSessionModel.cs" />
+    <Compile Include="Models\PersonnelModel.cs" />
     <Compile Include="Models\ScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="webapi\events.aspx.cs">

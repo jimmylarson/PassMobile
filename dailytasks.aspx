@@ -27,6 +27,51 @@
 </head>
 <body>
     <div id="sidenav"></div>
+    <div id="data-container">
+        <div id="panel-data">
+                <form class="modal-data" runat="server" onclick="">
+                    <asp:HiddenField ID="ModalEventDetailsId" runat="server" ClientIDMode="Static" />
+
+                    <label class="label-data">Event Name:</label>
+                    <asp:Label ID="ModalEventDetailsName" runat="server" ClientIDMode="Static" CssClass="caldata" />
+
+                    <label class="label-data">Event Type:</label>
+                    <asp:Label ID="ModalEventDetailsTypeText" runat="server" ClientIDMode="Static" CssClass="caldata" />
+
+                    <label class="label-data">Event Frequency:</label>
+                    <asp:Label ID="ModalEventDetailsFrequency" runat="server" ClientIDMode="Static" CssClass="caldata" />
+
+                    <label class="label-data" for="task-complete-action-by">Action By:</label>
+                    <asp:Label ID="ModalEventDetailsActionBy" runat="server" ClientIDMode="Static" CssClass="caldata" />
+
+                    <label class="label-data">Date Actioned:</label>
+                    <asp:TextBox ID="ModalEventDetailsActionDate" runat="server" ClientIDMode="Static" CssClass="caldata"/>
+
+                    <label class="label-data">Time Actioned:</label>
+                    <asp:TextBox ID="ModalEventDetailsActionTime" runat="server" CssClass="caldata"/>
+
+                    <label class="label-data">Completed By:</label>
+                    <asp:DropDownList ID="ModalEventDetailsCompletedBy" runat="server" AutoPostBack="false" ClientIDMode="Static" CssClass="caldata"></asp:DropDownList>
+                    
+                    <label class="label-data">Completion Notes:</label>
+                    <asp:TextBox ID="ModalEventDetailsNotes" runat="server" AutoPostBack="false" ClientIDMode="Static" TextMode="MultiLine" Columns="50" Rows="3" CssClass="form-control"></asp:TextBox>
+                    <asp:HiddenField ID="ModalEventDetailsType" runat="server" ClientIDMode="Static" Value="" />
+
+                    <asp:Button ID="ModalEventDetailsComplete"
+                        runat="server" ClientIDMode="Static"
+                        Text="Complete" OnClick="ModalEventDetailsComplete_Click"
+                        OnClientClick="if (!Page_ClientValidate()){ return false; } this.disabled=true; this.value='working...';"
+                        UseSubmitBehavior="false" CssClass="data-buttons" />
+
+                    <asp:Button ID="ModalEventDetailsDelete" runat="server" Text="Delete" OnClick="ModalEventDetailsDelete_Click" CssClass="data-buttons" />
+
+
+                    <button type="button" id="cancel" class="data-buttons" onclick="closeData()">Cancel</button>
+                </form>
+            </div>
+    </div>
+
+
     <div id="main">
         <span id="nav-gliph" onclick="openNav()" class="glyphicon glyphicon-th-list"></span>
         <div class="panel">
@@ -35,85 +80,5 @@
         </div>
     </div>
 
-            <div class="modal fade" id="modal-event-task-select" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Change the Date & Add Notes</h4>
-                    </div>
-                    <div class="modal-body">
-                        <asp:HiddenField ID="ModalEventDetailsId" runat="server" ClientIDMode="Static" Value="" />
-                        <div class="form-horizontal">
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Event Name:</label>
-                                <asp:Label ID="ModalEventDetailsName" runat="server" ClientIDMode="Static" CssClass="col-sm-8" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Event Type:</label>
-                                <asp:Label ID="ModalEventDetailsTypeText" runat="server" ClientIDMode="Static" CssClass="col-sm-8" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Event Frequency:</label>
-                                <asp:Label ID="ModalEventDetailsFrequency" runat="server" ClientIDMode="Static" CssClass="col-sm-8" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4" for="task-complete-action-by">Action By:</label>
-                                <asp:Label ID="ModalEventDetailsActionBy" runat="server" ClientIDMode="Static" CssClass="col-sm-8" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Date Actioned:</label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="ModalEventDetailsActionDate" runat="server" ClientIDMode="Static" />                                
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Time Actioned:</label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="ModalEventDetailsActionTime" runat="server"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Completed By:</label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ModalEventDetailsCompletedBy" runat="server" AutoPostBack="false" ClientIDMode="Static" CssClass="pass-asp-drop-down-list"></asp:DropDownList>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Completion Notes:</label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="ModalEventDetailsNotes" runat="server" AutoPostBack="false" ClientIDMode="Static" TextMode="MultiLine" Columns="50" Rows="3" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <asp:HiddenField ID="ModalEventDetailsType" runat="server" ClientIDMode="Static" Value="" />
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-3">
-                                    <asp:Button ID="ModalEventDetailsComplete"
-                                        runat="server" ClientIDMode="Static" 
-                                        Text="Complete" OnClick="ModalEventDetailsComplete_Click"
-                                        OnClientClick="if (!Page_ClientValidate()){ return false; } this.disabled=true; this.value='working...';"
-                                        UseSubmitBehavior="false" CssClass="btn btn-primary btn-block btn-sm" />
-                                </div>
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-3">
-                                </div>
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-2">
-                                    <asp:Button ID="ModalEventDetailsDelete" runat="server" Text="Delete" OnClick="ModalEventDetailsDelete_Click" CssClass="btn btn-primary btn-block btn-sm" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" onclick="return false;" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
 </body>
 </html>

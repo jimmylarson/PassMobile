@@ -8,48 +8,37 @@
             right: 'prev,next'
         },
         eventClick: function (event) {
-            if (event.url) {
-                window.open(event.url);
-                return false;
-            }
-            if (event.id == 1 || event.id == 2) {
-                debugger;
-                var first = event.start._i;
-                var second = first.replace('-', '.');
-                var start = second.replace('-', '.');
-                $('body').css('cursor', 'default');
-                $(location).attr('href', 'ManageJobsRepairsFaults.aspx?start=' + start + '&type=' + event.id);
-            }
-            else if (event.id) {
+            if (event.id) {
                 $('#ModalEventDetailsCompletedBy')[0].selectedIndex = event.nominatedIndex;
                 $('#ModalEventDetailsId').val(event.id);
-                $('#ModalEventInfoId').val(event.id);
                 $('#ModalEventDetailsName').text(event.title);
-                $('#ModalEventInfoName').text(event.title);
-                var eventType = 'Compliance Task';
                 $('#ModalEventDetailsType').val(event.eventType);
-                $('#ModalEventInfoType').val(event.eventType);
+                var eventType = 'Compliance Task';
                 $('#ModalEventDetailsTypeText').text(eventType);
-                $('#ModalEventInfoTypeText').text(eventType);
                 $('#ModalEventDetailsFrequency').text(event.eventFrequency);
-                $('#ModalEventInfoFrequency').text(event.eventFrequency);
                 $('#ModalEventDetailsActionBy').text(event.eventAssigned);
-                $('#ModalEventInfoBookedCheckBox').prop('checked', (event.infoStatus == 'B'));
-                $('#ModalEventInfoBooked').val(event.infoStatus == 'B');
-                $.ajax({
-                    type: 'GET',
-                    url: './webapi/tasks_get_notes.aspx?id=' + event.id,
-                    success: function (data) { $('#ModalEventInfoOriginalNotes').val(data); $('#ModalEventInfoNotes').text(data); }
-                });
-                $.ajax({
-                    type: 'GET',
-                    url: './webapi/tasks_get_document_count.aspx?id=' + event.id,
-                    success: function (data) { $('#ModalEventInfoDocuments').val(data); $('#ModalEventInfoDocuments').text(data); }
-                });
-                $('#modal-event-task-select').modal();
+                var today = new Date();
+                var date = today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear();
+                $('#ModalEventDetailsActionDate').val(date);
+                $('#ModalEventDetailsActionTime').val(today.getHours() + ":" + today.getMinutes());
+                openData();
             }
         },
         events: './webapi/events.aspx?month=0',
     });
 
 });
+
+
+function openData() {
+    document.getElementById("data-container").style.height = "90%";
+    document.getElementById("main").style.display = "none";
+    document.getElementById('nav-gliph').style.display = "none";
+}
+
+function closeData() {
+    document.getElementById("data-container").style.height = "0";
+    document.getElementById("main").style.display = "initial";
+    document.getElementById("main").style.marginTop = "0";
+    document.getElementById('nav-gliph').style.display = "initial";
+}
