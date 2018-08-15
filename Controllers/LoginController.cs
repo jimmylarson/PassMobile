@@ -179,12 +179,13 @@ namespace PassMobile.Controllers
                                         cmd.Parameters.AddWithValue("@p_Id", compId);
                                         outId = null;
                                         outId = new SqlParameter();
-                                        outId.ParameterName = "@o_Id";
-                                        outId.SqlDbType = SqlDbType.Int;
+                                        outId.ParameterName = "@o_Code";
+                                        outId.SqlDbType = SqlDbType.VarChar;
+                                        outId.Size = 50;
                                         outId.Direction = ParameterDirection.Output;
                                         cmd.Parameters.Add(outId);
                                         spReturn = cmd.ExecuteNonQuery();
-                                        code = string.IsNullOrWhiteSpace(outId.Value.ToString()) ? "0" : outId.Value.ToString();
+                                        code = string.IsNullOrWhiteSpace(outId.Value.ToString()) ? "" : outId.Value.ToString();
                                         if (code.Length > 0)
                                         {
                                             _session.code = code;
