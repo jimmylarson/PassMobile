@@ -213,7 +213,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
     <Content Include="reports.html" />
     <Content Include="scripts\global.js" />
     <Content Include="scripts\index.js" />
