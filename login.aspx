@@ -22,7 +22,7 @@
 </head>
     <body>
         <div class="panel">
-            <div class="state"><img id="logo" src="images/passms.png"/></div>
+            <div class="state"><img id="logo" src="images/logo-lrg.png"/></div>
             <div class="form">
             <form id="form1" runat="server" onsubmit="">
             <div>

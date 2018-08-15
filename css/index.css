@@ -18,7 +18,6 @@ input {
     .panel .state {
         margin-top: 5px;
         width: 100%;
-        height: 25%;
         color: white;
         font-size: 20px;
     }
@@ -48,14 +47,12 @@ input {
     }
 
 #logo {
-    max-width: 200px;
-    height: 50%;
-    max-height: 200px;
+    height: 65%;
     position: relative;
     top: 20%
 }
 
 .state {
-    height: 50%;
+    height: 35%;
 }
 
