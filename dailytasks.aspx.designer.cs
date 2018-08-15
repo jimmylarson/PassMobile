@@ -11,5 +11,113 @@ namespace PassMobile {
     
     
     public partial class dailytasks {
+        
+        /// <summary>
+        /// ModalEventDetailsId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ModalEventDetailsId;
+        
+        /// <summary>
+        /// ModalEventDetailsName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ModalEventDetailsName;
+        
+        /// <summary>
+        /// ModalEventDetailsTypeText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ModalEventDetailsTypeText;
+        
+        /// <summary>
+        /// ModalEventDetailsFrequency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ModalEventDetailsFrequency;
+        
+        /// <summary>
+        /// ModalEventDetailsActionBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ModalEventDetailsActionBy;
+        
+        /// <summary>
+        /// ModalEventDetailsActionDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ModalEventDetailsActionDate;
+        
+        /// <summary>
+        /// ModalEventDetailsActionTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ModalEventDetailsActionTime;
+        
+        /// <summary>
+        /// ModalEventDetailsCompletedBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ModalEventDetailsCompletedBy;
+        
+        /// <summary>
+        /// ModalEventDetailsNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ModalEventDetailsNotes;
+        
+        /// <summary>
+        /// ModalEventDetailsType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ModalEventDetailsType;
+        
+        /// <summary>
+        /// ModalEventDetailsComplete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ModalEventDetailsComplete;
+        
+        /// <summary>
+        /// ModalEventDetailsDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ModalEventDetailsDelete;
     }
 }
