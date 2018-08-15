@@ -189,6 +189,7 @@
     <Content Include="images\cordova.png" />
     <Content Include="images\glyphicons-225-chevron-left.png" />
     <Content Include="images\passms.png" />
+    <Content Include="login.aspx" />
     <Content Include="meters.html" />
     <Content Include="newmeter.html" />
     <Content Include="packages.config" />
@@ -222,6 +223,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\MobileSessionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="webapi\mobile_login.aspx.cs">
