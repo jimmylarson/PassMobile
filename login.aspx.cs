@@ -30,7 +30,7 @@ namespace PassMobile
                 Session["comp"] = mobileSession.comp;
                 Session["role"] = mobileSession.role;
                 Session["group"] = mobileSession.group;
-                Response.Redirect("dailytasks.html");
+                Response.Redirect("dailytasks.aspx");
             }
         }
     }

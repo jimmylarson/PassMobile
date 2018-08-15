@@ -83,6 +83,7 @@
     <Content Include="css\reports.css" />
     <Content Include="css\sidenav.css" />
     <Content Include="css\tasks.css" />
+    <Content Include="dailytasks.aspx" />
     <Content Include="dailytasks.html" />
     <Content Include="fullcalendar\CHANGELOG.txt" />
     <Content Include="fullcalendar\CONTRIBUTING.txt" />
@@ -203,6 +204,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="scripts\dailytasks.js" />
     <Content Include="webapi\events.aspx" />
     <Content Include="webapi\mobile_login.aspx" />
     <None Include="Properties\PublishProfiles\PassMSMobileClient.pubxml" />
@@ -226,6 +228,13 @@
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="dailytasks.aspx.cs">
+      <DependentUpon>dailytasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dailytasks.aspx.designer.cs">
+      <DependentUpon>dailytasks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
