@@ -21,18 +21,6 @@ span {
     font-size: 10px;
 }
 
-.panel {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
-    background: #2b2b2b;
-    margin: 15% auto;
-    text-align: center;
-    color: white;
-    padding-bottom: 10px;
-}
-
-
 h1 {
     font-size: 20px;
     margin: 0px !important;
