@@ -33,10 +33,18 @@
 
             <h1>Utilities Meters</h1>
             <div ng-controller="filterctrl" class="buttonsorts">
-                <button class="sort" ng-click="myFilter = {type: ''}">All</button>
-                <button class="sort" ng-click="myFilter = {type: 'E'}">Electric</button>
-                <button class="sort" ng-click="myFilter = {type: 'W'}">Water</button>
-                <button class="sort" ng-click="myFilter = {type: 'G'}">Gas</button>
+                <div class="button-container">
+                    <button class="sort" ng-click="myFilter = {type: ''}" autofocus>All</button>
+                </div>
+                <div class="button-container">
+                    <button class="sort" ng-click="myFilter = {type: 'E'}">Electric</button>
+                </div>
+                <div class="button-container">
+                    <button class="sort" ng-click="myFilter = {type: 'W'}">Water</button>
+                </div>
+                <div class="button-container">
+                    <button class="sort" ng-click="myFilter = {type: 'G'}">Gas</button>
+                </div>
                 <table id="table">
                     <tr><th>Type</th><th>Name</th><th>Freq</th></tr>
                     <tr ng-repeat="user in users | filter : myFilter">
@@ -46,7 +54,7 @@
                     </tr>
                 </table>
             </div>
-            </div>
         </div>
+    </div>
 </body>
 </html>
