@@ -15,6 +15,12 @@
     <script src='fullcalendar/lib/moment.min.js'></script>
     <script src='fullcalendar/fullcalendar.js'></script>
     <script>
+        $(document).ready(function () {
+            $.get("sidenav.html", function (data) {
+                $("#sidenav").html(data);
+            });
+        });
+
         $(function () {
             $('#calendar').fullCalendar({
                 defaultView: 'listDay',
@@ -27,85 +33,64 @@
                 events: [
                     {
                         title: 'event1',
-                        start: '2018-07-28'
+                        start: '2018-08-15'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-14'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-13'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-14'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-14'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-11'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-14'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-12'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-10'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-09'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-15'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-13'
                     },
                     {
                         title: 'event2',
-                        start: '2018-07-28'
+                        start: '2018-08-11'
                     },
-                    {
-                        title: 'event2',
-                        start: '2018-07-28'
-                    },
-                    {
-                        title: 'event2',
-                        start: '2018-07-28'
-                    },
-                    {
-                        title: 'event2',
-                        start: '2018-07-28'
-                    },
-                    {
-                        title: 'event2',
-                        start: '2018-07-28'
-                    },
-                    {
-                        title: 'event2',
-                        start: '2018-07-28'
-                    },
-
                     {
                         title: 'event3',
-                        start: '2018-07-28T14:30:00',
+                        start: '2018-08-14T14:30:00',
                         allDay: false // will make the time show
                     },
                     {
                         title: 'event3',
-                        start: '2018-07-28T12:30:00',
+                        start: '2018-08-14T11:30:00',
                         allDay: false // will make the time show
                     }
                 ],
@@ -122,26 +107,11 @@
     </script>
 </head>
 <body>
-    <div id="mySidenav" class="sidenav">
-        <div class="topnavigation">
-            <img id="navlogo" src="images/passms.png" />
-            <span id="close" class="glyphicon glyphicon-remove" onclick="closeNav()"></span>
-        </div>
-        <div class="navigation">
-            <a class="links" href="dailytasks.html">Today's Agenda</a>
-            <a class="links" href="reports.html">Report A Problem</a>
-            <a class="links" href="meters.html">Meters</a>
-        </div>
-        <div class="botnavigation">
-            <a id="logout" href="index.html"><span id="userpic" class="glyphicon glyphicon-user"></span><span id="logouttext">Logout</span></a>
-        </div>
-    </div>
+    <div id="sidenav"></div>
     <div id="main">
         <span id="nav-gliph" onclick="openNav()" class="glyphicon glyphicon-th-list"></span>
-        <a id="add-gliph" href="newmeter.html"><span class="glyphicon glyphicon-plus"></span></a>
         <div class="panel">
-
-            <h1>Daily Tasks and Repairs</h1>
+            <h3>Daily Tasks and Repairs</h3>
             <div id="calendar"></div>
         </div>
     </div>
