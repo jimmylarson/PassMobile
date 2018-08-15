@@ -37,21 +37,5 @@ namespace PassMobile
             Response.Redirect(Request.RawUrl);
         }
 
-        protected void ModalEventInfoSave_Click(object sender, EventArgs e)
-        {
-            contSchedule = new ScheduleController();
-            string eventId = ModalEventInfoId?.Value.ToString();
-            string eventType = ModalEventInfoType?.Value.ToString();
-            var booked = (ModalEventInfoBooked.Value == "true");
-            var checkbox = ModalEventInfoBookedCheckBox.Checked;
-            string changeDate = ModalEventInfoDate?.Text;
-            var sqlDate = contSchedule.ConvertToSQLDateString(changeDate);
-            string originalNotes = ModalEventInfoOriginalNotes?.Value;
-            string changeNotes = ModalEventInfoNotes?.Text;
-            if (booked != checkbox) contSchedule.SetEventInfo(Session["mas"].ToString(), Session["comp"].ToString(), eventId, "0", "0", "", "B");
-            if (!string.IsNullOrWhiteSpace(eventId) && !string.IsNullOrWhiteSpace(sqlDate)) contSchedule.ChangeEvent(Session["mas"].ToString(), Session["comp"].ToString(), eventId, eventType, sqlDate);
-            if (!string.IsNullOrWhiteSpace(eventId) && !string.IsNullOrWhiteSpace(changeNotes) && originalNotes != changeNotes) contSchedule.SetEventInfo(Session["mas"].ToString(), Session["comp"].ToString(), eventId, "0", "0", changeNotes, " ");
-            Response.Redirect(Request.RawUrl);
-        }
     }
 }
